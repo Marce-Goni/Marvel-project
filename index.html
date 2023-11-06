@@ -88,10 +88,10 @@
   <body>
     <header>
       <nav
-        class="m-2 flex-nowrap bg-black bg-contain bg-center bg-no-repeat md:w-[99vw] h-40"
+        class="m-2 flex-nowrap bg-black bg-contain bg-center bg-no-repeat md:w-[98vw] h-40"
         style="background-image: url(img/logo-marvel-removebg-preview.png)"
       >
-        <div class="flex justify-between">
+        <!--<div class="flex justify-between">
           <div class="dropdown">
             <button
               class="btn btn-secondary dropdown-toggle"
@@ -116,96 +116,124 @@
                 </button>
               </li>
             </ul>
+          </div>-->
+        <div class="flex justify-between bg-black">
+          <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center text-sm font-medium text-center text-white rounded-lg" type="button"> 
+            <svg class=" w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
+              <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
+            </svg>
+          </button>
+          
+          <!-- Dropdown menu -->
+          <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                </li>
+              </ul>
+              <div class="py-2">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated link</a>
+              </div>
           </div>
 
           <div class="md:flex md:mx-2">
-            <input class="hidden md:block md:mx-2" type="search" />
+            <input class="hidden md:block md:mx-2 md:mt-1 md:rounded" type="search" />
             <button class="text-white">
               <i class="p-2 fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
-        </div>
+        </div>  
       </nav>
     </header>
 
     <main>
       <section>
-        <article class="flex w-[95vw] h-[20vh] ms-2 -skew-x-12">
+        <article class="flex w-[95vw] h-[20vh] ms-2 lg:h-[25vh] lg:ps-5 -skew-x-12 border-2 border-green-500">
           <div
-            class="bg-cover bg-center w-[20vw] hover:scale-110 hover:border-red-500 hover:border-2"
+            class="bg-cover bg-center w-[20vw] lg:h-[25vh] hover:scale-110 hover:border-red-500 hover:border-2"
             style="background-image: url(img/thor.jpg)"
           ></div>
 
           <div
-            class="bg-cover bg-center w-[20vw] hover:scale-110 hover:border-blue-500 hover:border-2"
+            class="bg-cover bg-center w-[20vw] lg:h-[25vh] hover:scale-110 hover:border-blue-500 hover:border-2"
             style="background-image: url(img/capitan-america.webp)"
           ></div>
 
           <div
-            class="bg-cover bg-center w-[20vw] hover:scale-110 hover:border-black hover:border-2"
+            class="bg-cover bg-center w-[20vw] lg:h-[25vh] hover:scale-110 hover:border-black hover:border-2"
             style="background-image: url(img/black-widow.jpg)"
           ></div>
 
           <div
-            class="bg-cover bg-center w-[20vw] hover:scale-110 hover:border-green-500 hover:border-2"
+            class="bg-cover bg-center w-[20vw] lg:h-[25vh] hover:scale-110 hover:border-green-500 hover:border-2"
             style="background-image: url(img/hulk.jpg)"
           ></div>
 
           <div
-            class="bg-cover bg-center w-[20vw] hover:scale-110 hover:border-white hover:border-2"
+            class="bg-cover bg-center w-[20vw] lg:h-[25vh] hover:scale-110 hover:border-white hover:border-2"
             style="background-image: url(img/doctor-strange.webp)"
           ></div>
         </article>
       </section>
 
       <section>
-        <h1 class="text-center text-2xl">Universo Marvel</h1>
-        <h2 class="text-center">Elige tu personaje</h2>
+        <article>
+          <h1 class="text-center text-2xl">Universo Marvel</h1>
 
-        <div class="container">
-          <ul class="slider">
-            <li id="slide1">
-              <img src="img/cinematic-universe.png" alt="" />
+        <div class="mx-2 w-[95vw]">
+          <ul class="w-20 slider">
+            <li class="">
+              <img class="" src="img/cinematic-universe.jpg" alt="Cinematic universe" />
             </li>
             <li id="slide2">
-              <img src="img/phase-one.jpg" alt="" />
+              <img src="img/phase-one.jpg" alt="Phase one" />
             </li>
             <li id="slide3">
-              <img src="img/phase-two.jpg" alt="" />
+              <img src="img/phase-two.jpg" alt="Phase two" />
             </li>
             <li id="slide4">
-                <img src="img/phase-three.webp" alt="" />
+                <img src="img/phase-three.jpg" alt="Phase three" />
               </li>
               <li id="slide5">
-                <img src="img/phase-four.png" alt="" />
+                <img class="" src="img/phase-four.jpg" alt="Phase four" />
               </li>
               <li id="slide6">
-                <img src="img/marvel-freeform.jpg" alt="" />
+                <img src="img/phase-five.jpg" alt="Phase five" />
               </li>
           </ul>
 
           <ul class="menu">
             <li>
-                <a href="#slide1">1</a>
+                <a href="#slide1"></a>
             </li>
             <li>
-                <a href="#slide2">2</a>
+                <a href="#slide2"></a>
             </li>
             <li>
-                <a href="#slide3">3</a>
+                <a href="#slide3"></a>
             </li>
             <li>
-                <a href="#slide4">4</a>
+                <a href="#slide4"></a>
             </li>
             <li>
-                <a href="#slide5">5</a>
+                <a href="#slide5"></a>
             </li>
             <li>
-                <a href="#slide6">6</a>
+                <a href="#slide6"></a>
             </li>
           </ul>
         </div>
+        </article>  
       </section>
+
+      <footer class="bg-black text-white">
+      </footer>
     </main>
   </body>
 </html>
