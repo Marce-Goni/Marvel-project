@@ -16,74 +16,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <style>
-      .container {
-        margin: auto;
-        background-color: white;
-        width: 800px;
-        padding: 5px;
-      }
-
-      ul,
-      li {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-      }
-
-      ul.slider {
-        position: relative;
-        width: 95vw;
-        height: 300px;
-      }
-
-      ul.slider li {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        opacity: 0;
-        width: inherit;
-        height: inherit;
-        transition: opacity 0.5s;
-        background: #fff;
-      }
-
-      ul.slider li img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-
-      ul.slider li:first-child {
-        opacity: 1; /*Mostramos el primer <li>*/
-      }
-
-      ul.slider li:target {
-        opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
-      }
-
-      .menu {
-        text-align: center;
-        margin: 20px;
-      }
-
-      .menu li {
-        display: inline-block;
-        text-align: center;
-      }
-
-      .menu li a {
-        display: inline-block;
-        color: white;
-        text-decoration: none;
-        background-color: grey;
-        padding: 10px;
-        width: 20px;
-        height: 20px;
-        font-size: 20px;
-        border-radius: 100%;
-      }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
     <header>
@@ -91,57 +24,48 @@
         class="m-2 flex-nowrap bg-black bg-contain bg-center bg-no-repeat md:w-[98vw] h-40"
         style="background-image: url(img/logo-marvel-removebg-preview.png)"
       >
-        <!--<div class="flex justify-between">
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
+        <div class="flex justify-between">
+          <div>
+            <button 
+              class="btn btn-black text-white dropdown-toggle"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               Menú
             </button>
-            <ul class="dropdown-menu">
+
+            <ul class="dropdown-menu" data-bs-theme="dark">
               <li>
-                <button class="dropdown-item" type="button">Action</button>
+                <a class="dropdown-item" href="#">
+                  Personajes
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="#">
+                  Fases
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="#">
+                  Universo Cinemático
+                </a>
               </li>
               <li>
-                <button class="dropdown-item" type="button">
-                  Another action
-                </button>
+                <a class="dropdown-item" href="#">
+                  Orden Cronológico
+                </a>
               </li>
               <li>
-                <button class="dropdown-item" type="button">
-                  Something else here
-                </button>
+                <a class="dropdown-item" href="#">
+                  Coming Soon
+                </a>
               </li>
             </ul>
-          </div>-->
-        <div class="flex justify-between bg-black">
-          <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center text-sm font-medium text-center text-white rounded-lg" type="button"> 
-            <svg class=" w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 4 15">
-              <path d="M3.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 6.041a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm0 5.959a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/>
-            </svg>
-          </button>
-          
-          <!-- Dropdown menu -->
-          <div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                </li>
-              </ul>
-              <div class="py-2">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated link</a>
-              </div>
           </div>
-
+        
           <div class="md:flex md:mx-2">
             <input class="hidden md:block md:mx-2 md:mt-1 md:rounded" type="search" />
             <button class="text-white">
@@ -177,63 +101,67 @@
 
           <div
             class="bg-cover bg-center w-[20vw] lg:h-[25vh] hover:scale-110 hover:border-white hover:border-2"
-            style="background-image: url(img/doctor-strange.webp)"
+            style="background-image: url(https://i.pinimg.com/236x/8e/6f/32/8e6f32e6abeb3ce80650db31c10f896f.jpg)"
           ></div>
         </article>
       </section>
 
       <section>
-        <article>
-          <h1 class="text-center text-2xl">Universo Marvel</h1>
-
-        <div class="mx-2 w-[95vw]">
-          <ul class="w-20 slider">
-            <li class="">
-              <img class="" src="img/cinematic-universe.jpg" alt="Cinematic universe" />
-            </li>
-            <li id="slide2">
-              <img src="img/phase-one.jpg" alt="Phase one" />
-            </li>
-            <li id="slide3">
-              <img src="img/phase-two.jpg" alt="Phase two" />
-            </li>
-            <li id="slide4">
-                <img src="img/phase-three.jpg" alt="Phase three" />
-              </li>
-              <li id="slide5">
-                <img class="" src="img/phase-four.jpg" alt="Phase four" />
-              </li>
-              <li id="slide6">
-                <img src="img/phase-five.jpg" alt="Phase five" />
-              </li>
-          </ul>
-
-          <ul class="menu">
-            <li>
-                <a href="#slide1"></a>
-            </li>
-            <li>
-                <a href="#slide2"></a>
-            </li>
-            <li>
-                <a href="#slide3"></a>
-            </li>
-            <li>
-                <a href="#slide4"></a>
-            </li>
-            <li>
-                <a href="#slide5"></a>
-            </li>
-            <li>
-                <a href="#slide6"></a>
-            </li>
-          </ul>
+        <div id="carouselExampleIndicators" class="carousel slide w-[98vw] mx-2 my-2 border-2 border-green-500">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/cinematic-universe.jpg" class="d-block w-100 h-60" alt="Cinematic Universe">
+            </div>
+            <div class="carousel-item">
+              <img src="img/phase-one.jpg" class="d-block w-100 h-60" alt="Phase One">
+            </div>
+            <div class="carousel-item">
+              <img src="img/phase-two.jpg" class="d-block w-100 h-60" alt="Phase Two">
+            </div>
+            <div class="carousel-item">
+              <img src="img/phase-three.jpg" class="d-block w-100 h-60" alt="Phase Three">
+            </div>
+            <div class="carousel-item">
+              <img src="img/phase-four.jpg" class="d-block w-100 h-60" alt="Phase Four">
+            </div>
+            <div class="carousel-item">
+              <img src="img/phase-five.jpg" class="d-block w-100 h-60" alt="Phase Five">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        </article>  
       </section>
 
-      <footer class="bg-black text-white">
+      <footer class="flex flex-col bg-black text-white mx-2">
+        <div class="flex flex-col">
+          <div class="m-2">
+              <h5>Redes Sociales</h5>
+              <a href="#"><i class="fa-brands fa-twitch"></i></a>
+              <a href="#"><i class="fa-brands fa-discord"></i></a>
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          
+              <h6 class="text-center">Copyright Marcelo Goñi 2023 - Maquetador web</h6>
+        </div>
+        
       </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
